@@ -119,7 +119,7 @@ where ApplyID = q.AccountID
 GO
 
 update [dbo].WS02_OS
-set ParentDeptID = q.DeptID
+set ParentDeptID = q.[ParentDeptID]
 from (
         select *
         from [dbo].[EFC_CurrentMember]
@@ -129,7 +129,7 @@ GO
 
 
 update [dbo].WS02_OS
-set ParentDeptName = q.DeptName
+set ParentDeptName = q.[ParentDeptName]
 from (
         select *
         from [dbo].[EFC_CurrentMember]
